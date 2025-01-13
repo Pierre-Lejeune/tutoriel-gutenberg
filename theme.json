@@ -46,6 +46,29 @@
 					"color": "#00F"
 				}
 			]
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"customSpacingSize": false,
+			"spacingSizes": [
+				{
+					"name": "Small",
+					"slug": "small",
+					"size": "15px"
+				},
+				{
+					"name": "Medium",
+					"slug": "medium",
+					"size": "30px"
+				},
+				{
+					"name": "Large",
+					"slug": "large",
+					"size": "50px"
+				}
+
+			]
 		}
 	}
 }
