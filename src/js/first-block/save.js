@@ -1,10 +1,10 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
-const save = (props) => {
+const save = ({attributes}) => {
     const blockProps = useBlockProps.save();
     return (
         <div {...blockProps}>
-            <span>Test</span>
+            <span>Test {attributes.point}</span>
         </div>
     )
 }

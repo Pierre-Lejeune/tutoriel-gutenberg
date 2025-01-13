@@ -1,6 +1,6 @@
-const edit = () => {
+const edit = ({attributes}) => {
     return (
-        <span>Test</span>
+        <span>Test {attributes.point}</span>
     );
 };
 
