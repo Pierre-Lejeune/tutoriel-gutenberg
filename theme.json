@@ -12,5 +12,40 @@
 			"name": "footer",
 			"title": "Footer"
 		}
-	]
+	],
+	"settings": {
+		"layout": {
+			"contentSize": "1320px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#222"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#FFF"
+				},
+				{
+					"name": "Red",
+					"slug": "primary",
+					"color": "#F00"
+				},
+				{
+					"name": "Green",
+					"slug": "secondary",
+					"color": "#0F0"
+				},
+				{
+					"name": "Blue",
+					"slug": "tertiary",
+					"color": "#00F"
+				}
+			]
+		}
+	}
 }
