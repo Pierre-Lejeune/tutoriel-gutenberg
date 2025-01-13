@@ -1,0 +1,1 @@
+{"version":3,"file":"script.js","mappings":";;;;AAAAA,KAAK,CAAC,SAAS,CAAC,C","sources":["webpack://tutoriel-gutenberg/./src/js/index.js"],"sourcesContent":["alert('bonjour');"],"names":["alert"],"sourceRoot":""}
