@@ -1,5 +1,11 @@
 {
   "title": "Mon premier bloc",
   "description": "Ceci est mon premier bloc",
-  "category": "design"
+  "category": "design",
+  "attributes": {
+    "point": {
+      "type": "number",
+      "default": 0
+    }
+  }
 }

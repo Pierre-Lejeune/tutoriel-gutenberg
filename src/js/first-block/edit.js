@@ -1,12 +1,7 @@
-import { useBlockProps } from '@wordpress/block-editor';
-
-const edit = (props) => {
-    const blockProps = useBlockProps();
+const edit = () => {
     return (
-        <div {...blockProps}>
-            <span>Test</span>
-        </div>
-    )
-}
+        <span>Test</span>
+    );
+};
 
 export default edit;
