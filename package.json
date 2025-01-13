@@ -1,5 +1,8 @@
 {
   "name": "tutoriel-gutenberg",
   "version": "1.0.0",
-  "description": "Package de notre thème Gutenberg"
+  "description": "Package de notre thème Gutenberg",
+  "devDependencies": {
+    "@wordpress/scripts": "^30.8.1"
+  }
 }
