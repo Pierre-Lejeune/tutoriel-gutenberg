@@ -1,6 +1,12 @@
-const edit = ({attributes}) => {
+import {Fragment} from "@wordpress/element";
+
+const edit = ({attributes, setAttributes}) => {
     return (
-        <span>Test {attributes.point}</span>
+        <Fragment>
+            <button onClick={()=>{setAttributes({point: attributes.point-1})}}>Décrémenter</button>
+            <span>Test {attributes.point}</span>
+            <button onClick={()=>{setAttributes({point: attributes.point+1})}}>Incrémenter</button>
+        </Fragment>
     );
 };
 
