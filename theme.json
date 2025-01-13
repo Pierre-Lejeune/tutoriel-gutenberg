@@ -51,23 +51,44 @@
 			"margin": true,
 			"padding": true,
 			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
 					"name": "Small",
 					"slug": "small",
-					"size": "15px"
+					"size": "clamp(.5rem, .0625rem + .875vw, .9375rem)"
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "30px"
+					"size": "clamp(.9375rem, 0rem + 1.875vw, 1.875rem)"
 				},
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "50px"
+					"size": "clamp(1.875rem, .625rem + 2.5vw, 3.125rem)"
 				}
-
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"defaultFontSizes": false,
+			"fontSizes": [
+				{
+					"name": "Small",
+					"slug": "small",
+					"size": "clamp(1rem, .875rem + .25vw, 1.125rem)"
+				},
+				{
+					"name": "Medium",
+					"slug": "medium",
+					"size": "clamp(1.25rem, 1rem + .5vw, 1.5rem)"
+				},
+				{
+					"name": "Large",
+					"slug": "large",
+					"size": "clamp(1.5rem, 1rem + 1vw, 2rem)"
+				}
 			]
 		}
 	}
