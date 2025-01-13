@@ -13,6 +13,12 @@
 			"title": "Footer"
 		}
 	],
+	"styles":{
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--paragraph)",
+			"fontSize": "var(--wp--preset--font-size--medium)"
+		}
+	},
 	"settings": {
 		"layout": {
 			"contentSize": "1320px"
@@ -93,6 +99,67 @@
 					"name": "Large",
 					"slug": "large",
 					"size": "clamp(1.5rem, 1rem + 1vw, 2rem)"
+				}
+			],
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Nunito\", arial, sans-serif",
+					"name": "Nunito",
+					"slug": "paragraph",
+					"fontFace": [
+						{
+							"fontFamily": "Nunito",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/nunito/nunito-regular.woff2",
+								"file:./assets/fonts/nunito/nunito-regular.woff",
+								"file:./assets/fonts/nunito/nunito-regular.eot",
+								"file:./assets/fonts/nunito/nunito-regular.svg",
+								"file:./assets/fonts/nunito/nunito-regular.ttg"
+							]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/nunito/nunito-italic.woff2",
+								"file:./assets/fonts/nunito/nunito-italic.woff",
+								"file:./assets/fonts/nunito/nunito-italic.eot",
+								"file:./assets/fonts/nunito/nunito-italic.svg",
+								"file:./assets/fonts/nunito/nunito-italic.ttg"
+							]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/nunito/nunito-bold.woff2",
+								"file:./assets/fonts/nunito/nunito-bold.woff",
+								"file:./assets/fonts/nunito/nunito-bold.eot",
+								"file:./assets/fonts/nunito/nunito-bold.svg",
+								"file:./assets/fonts/nunito/nunito-bold.ttg"
+							]
+						},
+						{
+							"fontFamily": "Nunito",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/nunito/nunito-bolditalic.woff2",
+								"file:./assets/fonts/nunito/nunito-bolditalic.woff",
+								"file:./assets/fonts/nunito/nunito-bolditalic.eot",
+								"file:./assets/fonts/nunito/nunito-bolditalic.svg",
+								"file:./assets/fonts/nunito/nunito-bolditalic.ttg"
+							]
+						}
+					]
 				}
 			]
 		}
