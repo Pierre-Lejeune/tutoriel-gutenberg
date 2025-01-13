@@ -20,7 +20,31 @@
 		}
 	},
 	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": false,
+		"dimensions": {
+			"minHeight": false
+		},
+		"lightbox": {
+			"enabled": false
+		},
+		"position": {
+			"sticky": false
+		},
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+        "background": {
+            "backgroundImage": false
+        },
+        "shadow": {
+			"defaultPresets": false
+		},
 		"layout": {
+			"allowEditing": true,
 			"contentSize": "1320px"
 		},
 		"color": {
