@@ -6,6 +6,12 @@
   border: 1px solid var(--wp--preset--color--black);
   border-radius: 5px;
 }
+.wp-block-tutoriel-gutenberg-first-block__text {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  transform: var(--rotate, rotate(0deg));
+}
 
 .wp-block-group.alignfull {
   background-color: var(--wp--preset--color--black);

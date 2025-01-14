@@ -31,9 +31,9 @@ const edit = ({
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
         title: "Nos param\xE8tres de bloc",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
           label: "Points",
           value: attributes.point,
           onChange: point => setAttributes({
@@ -41,11 +41,21 @@ const edit = ({
           }),
           min: 0,
           max: 10
-        })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.AnglePickerControl, {
+          label: "Rotation",
+          value: attributes.angle,
+          onChange: angle => setAttributes({
+            angle: angle
+          })
+        })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       ...blockProps,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        class: "wp-block-tutoriel-gutenberg-first-block__text",
+        style: {
+          '--rotate': `rotate(${attributes.angle}deg)`
+        },
         children: ["Test ", attributes.point]
       })
     })]
@@ -78,7 +88,11 @@ const save = ({
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-      children: ["Test ", attributes.point]
+      class: "wp-block-tutoriel-gutenberg-first-block__text",
+      style: {
+        '--rotate': `rotate(${attributes.angle}deg)`
+      },
+      children: ["Test ", attributes.point + ""]
     })
   });
 };
@@ -142,7 +156,7 @@ module.exports = window["wp"]["element"];
   \***************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"title":"Mon premier bloc","description":"Ceci est mon premier bloc","category":"design","attributes":{"point":{"type":"number","default":0}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"title":"Mon premier bloc","description":"Ceci est mon premier bloc","category":"design","attributes":{"point":{"type":"number","default":0},"angle":{"type":"number","default":0}}}');
 
 /***/ })
 
