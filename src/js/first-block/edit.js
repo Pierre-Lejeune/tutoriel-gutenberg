@@ -1,15 +1,20 @@
-import {InspectorControls, useBlockProps} from "@wordpress/block-editor";
-import {Fragment} from "@wordpress/element";
-import {PanelBody} from "@wordpress/components";
+import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import { PanelBody, RangeControl } from "@wordpress/components";
+import { Fragment } from "@wordpress/element";
 
 const edit = ({attributes, setAttributes}) => {
     const blockProps = useBlockProps();
     return (
         <Fragment>
             <InspectorControls>
-                <PanelBody title="test">
-                    <button onClick={()=>{setAttributes({point: attributes.point-1})}}>Décrémenter</button>
-                    <button onClick={()=>{setAttributes({point: attributes.point+1})}}>Incrémenter</button>
+                <PanelBody title="Nos paramètres de bloc">
+                    <RangeControl
+                        label="Points"
+                        value={attributes.point}
+                        onChange={(point)=>setAttributes({point: point})}
+                        min={ 0 }
+                        max={ 10 }
+                    />
                 </PanelBody>
             </InspectorControls>
             <div {...blockProps}>
