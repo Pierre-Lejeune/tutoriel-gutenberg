@@ -1,3 +1,5 @@
+@use "first-block";
+
 .wp-block-group{
     &.alignfull{
         background-color: var(--wp--preset--color--black);
