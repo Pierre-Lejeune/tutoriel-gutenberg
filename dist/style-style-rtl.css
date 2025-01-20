@@ -5,6 +5,7 @@
   padding: 15px;
   border: 1px solid var(--wp--preset--color--black);
   border-radius: 5px;
+  opacity: var(--transparency, 100%);
 }
 .wp-block-tutoriel-gutenberg-first-block__text {
   display: block;

@@ -2,6 +2,7 @@
     padding: 15px;
     border: 1px solid var(--wp--preset--color--black);
     border-radius: 5px;
+    opacity: var(--transparency, 100%);
     &__text{
         display: block;
         width: max-content;

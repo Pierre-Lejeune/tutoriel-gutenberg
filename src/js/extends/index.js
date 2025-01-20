@@ -1,7 +1,9 @@
 import { addFilter } from '@wordpress/hooks';
 import { createHigherOrderComponent } from '@wordpress/compose';
+import transparency from './transparency';
 
 export const getGutenbergExtends = () => [
+    transparency
 ];
 
 const registerGutenbergExtend = (extension) => {
