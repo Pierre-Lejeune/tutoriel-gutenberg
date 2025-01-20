@@ -37,3 +37,17 @@ add_action( "init", 'init_page_meta' );
 function sanitize_page_visibility($value) {
 	return boolval($value);
 } 
+
+function register_query_render(){
+	register_block_type('tutoriel-gutenberg/query', array(
+        'render_callback' => 'render_custom_query'
+    ));
+}
+
+add_action('init', 'register_query_render');
+
+
+
+function render_custom_query($attributes) {
+    return '<p>Bonjour</p>';
+}
