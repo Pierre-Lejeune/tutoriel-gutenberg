@@ -1,4 +1,5 @@
-import firstblock from "./first-block";
+import initBlocks from "./blocks";
+import extendsGutenbergBlocks from "./extends";
 
-firstblock();
-
+initBlocks();
+extendsGutenbergBlocks();

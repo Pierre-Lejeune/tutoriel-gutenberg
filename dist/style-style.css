@@ -1,1 +1,21 @@
-.wp-block-tutoriel-gutenberg-first-block{border:1px solid var(--wp--preset--color--black);border-radius:5px;padding:15px}.wp-block-tutoriel-gutenberg-first-block__text{display:block;transform:var(--rotate,rotate(0deg));width:-moz-max-content;width:max-content}.wp-block-group.alignfull{background-color:var(--wp--preset--color--black);color:var(--wp--preset--color--white)}
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.wp-block-tutoriel-gutenberg-first-block {
+  padding: 15px;
+  border: 1px solid var(--wp--preset--color--black);
+  border-radius: 5px;
+}
+.wp-block-tutoriel-gutenberg-first-block__text {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  transform: var(--rotate, rotate(0deg));
+}
+
+.wp-block-group.alignfull {
+  background-color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--white);
+}
+
+/*# sourceMappingURL=style-style.css.map*/
