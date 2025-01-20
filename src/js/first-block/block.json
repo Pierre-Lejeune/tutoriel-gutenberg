@@ -1,4 +1,5 @@
 {
+    "name": "tutoriel-gutenberg/first-block",
     "apiVersion": 2,
     "title": "Mon premier bloc",
     "description": "Ceci est mon premier bloc",
@@ -13,4 +14,4 @@
             "default": 0
         }
     }
-}
+}   

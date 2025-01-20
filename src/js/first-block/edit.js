@@ -4,26 +4,27 @@ import { Fragment } from "@wordpress/element";
 
 const edit = ({attributes, setAttributes}) => {
     const blockProps = useBlockProps();
+    const { point, angle } = attributes;
     return (
         <Fragment>
             <InspectorControls>
                 <PanelBody title="Nos paramètres de bloc">
                     <RangeControl
                         label="Points"
-                        value={attributes.point}
-                        onChange={(point)=>setAttributes({point: point})}
+                        value={point}
+                        onChange={point=>setAttributes({point})}
                         min={ 0 }
                         max={ 10 }
                     />
                     <AnglePickerControl
                         label="Rotation"
-                        value={attributes.angle}
-                        onChange={(angle)=>setAttributes({angle: angle})}
+                        value={angle}
+                        onChange={angle=>setAttributes({angle})}
                     />
                 </PanelBody>
             </InspectorControls>
             <div {...blockProps}>
-                <span class="wp-block-tutoriel-gutenberg-first-block__text" style={{'--rotate': `rotate(${attributes.angle}deg)`}}>Test {attributes.point}</span>
+                <span class="wp-block-tutoriel-gutenberg-first-block__text" style={{'--rotate': `rotate(${angle}deg)`}}>Test {point}</span>
             </div>
         </Fragment>
     );
