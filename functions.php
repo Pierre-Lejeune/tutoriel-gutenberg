@@ -60,3 +60,16 @@ function render_custom_query($attributes) {
 	$block .= '</div>';
 	return $block;
 }
+
+
+function set_excerpt_length($block_content, $block) {
+    if (
+        is_array($block) &&
+        isset($block['blockName'], $block['attrs'], $block['attrs']['transparency'])
+    ) {
+        if($block['attrs']['transparency']===0) return "";
+    }
+    return $block_content;
+}
+add_filter('render_block', 'set_excerpt_length', 5, 2);
+
