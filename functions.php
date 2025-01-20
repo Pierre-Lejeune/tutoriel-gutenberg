@@ -73,3 +73,35 @@ function set_excerpt_length($block_content, $block) {
 }
 add_filter('render_block', 'set_excerpt_length', 5, 2);
 
+
+function set_post_title($block_content, $block) {
+    if (
+        is_array($block) &&
+        isset($block['blockName']) &&
+        $block['blockName'] === 'core/post-title' &&
+        is_archive()
+    ) {
+        $dom = new DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML('<?xml encoding="utf-8" ?>' . $block_content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        libxml_clear_errors();
+        $title_element = $dom->getElementsByTagName('h1')->item(0) ?: $dom->getElementsByTagName('h2')->item(0);
+
+        if ($title_element) {
+            $new_title = '';
+            if (is_tax() || is_category() || is_tag()) {
+                $term = get_queried_object();
+                $new_title = esc_html($term->name);
+            } else {
+                $new_title = esc_html(post_type_archive_title('', false));
+            }
+            $title_element->nodeValue = $new_title;
+        }
+
+        $block_content = $dom->saveHTML();
+    }
+
+    return $block_content;
+}
+add_filter('render_block', 'set_post_title', 5, 2);
+
