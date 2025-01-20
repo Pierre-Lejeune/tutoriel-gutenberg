@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scss/front/style.scss":
-/*!***********************************!*\
-  !*** ./src/scss/front/style.scss ***!
-  \***********************************/
+/***/ "./src/scss/back/style.scss":
+/*!**********************************!*\
+  !*** ./src/scss/back/style.scss ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -100,8 +100,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"style": 0,
-/******/ 			"./style-style": 0
+/******/ 			"back-style": 0,
+/******/ 			"./style-back-style": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -151,9 +151,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-style"], () => (__webpack_require__("./src/scss/front/style.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-back-style"], () => (__webpack_require__("./src/scss/back/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=style.js.map
+//# sourceMappingURL=back-style.js.map

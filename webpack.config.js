@@ -3,7 +3,8 @@ const path = require('path');
 
 const entry = {
     'script': './src/js/index.js',
-    'style': './src/scss/style.scss',
+    'style': './src/scss/front/style.scss',
+    'back-style': './src/scss/back/style.scss'
 };
 
 module.exports = {

@@ -13,6 +13,11 @@ function register_theme_script() {
 }
 add_action( 'enqueue_block_editor_assets', 'register_theme_script' );
 
+function register_backoffice_theme_style($hook="") {
+	wp_enqueue_style( 'backoffice-style', get_template_directory_uri() . '/dist/style-back-style.css' );
+}
+add_action( 'admin_enqueue_scripts', 'register_backoffice_theme_style', 100 );
+
 
 function init_page_meta(){
 	register_meta( 'post', 'visible', array(
