@@ -8,5 +8,11 @@
     "query",
     "custom",
     "tutoriel"
-  ]
+  ],
+  "attributes": {
+    "page_id": {
+      "type": "number",
+      "default": 0
+    }
+  }
 }

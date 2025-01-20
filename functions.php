@@ -40,14 +40,23 @@ function sanitize_page_visibility($value) {
 
 function register_query_render(){
 	register_block_type('tutoriel-gutenberg/query', array(
-        'render_callback' => 'render_custom_query'
+        'render_callback' => 'render_custom_query',
+		'attributes' => array(
+			'page_id' => array(
+				'type' => 'number',
+				'default' => 0
+			)
+		)
     ));
 }
 
 add_action('init', 'register_query_render');
 
-
-
 function render_custom_query($attributes) {
-    return '<p>Bonjour</p>';
+	$page_id = isset($attributes['page_id']) ? intval($attributes['page_id']) : 0;
+	$block = '<div class="wp-block-tutoriel-gutenberg-query">';
+	if($page_id) $block .= '<h2><a href="'.get_the_permalink( $page_id ).'" target="_blank">'.get_the_title($page_id).'</a></h2>';
+	else $block .= "<p>Merci de sélectionner une page depuis les paramètres de ce bloc (en back-office)</p>";
+	$block .= '</div>';
+	return $block;
 }

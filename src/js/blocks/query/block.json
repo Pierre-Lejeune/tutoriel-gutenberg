@@ -4,5 +4,11 @@
     "title": "Ma custom query",
     "category": "design",
     "icon": "admin-site",
-    "keywords": ["query", "custom", "tutoriel"]
+    "keywords": ["query", "custom", "tutoriel"],
+    "attributes":{
+        "page_id":{
+            "type": "number",
+            "default": 0
+        }
+    }
 }
