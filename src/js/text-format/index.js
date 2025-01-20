@@ -1,27 +1,9 @@
-import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
-import { RichTextToolbarButton } from '@wordpress/block-editor';
+import { registerFormatType } from '@wordpress/rich-text';
+import highlight from './highlight';
 
-const customTextFormat = ({ isActive, value, onChange }) => {
-    return (
-        <RichTextToolbarButton
-            icon="button"
-            title="Test"
-            onClick={ () => {
-                onChange(
-                    toggleFormat(value,{type:'tutoriel-gutenberg/test'})
-                )
-            } }
-            isActive={isActive}
-        />
-    );
-}
+const textFormats = [
+    highlight
+]
 
-const addTextFormat = () => {
-    registerFormatType('tutoriel-gutenberg/test', {
-        title: "Test",
-        tagName: 'span',
-        className: "test",
-        edit: customTextFormat
-    });
-}
+const addTextFormat = () => textFormats.map(format => registerFormatType(format.name, {...format}));
 export default addTextFormat;

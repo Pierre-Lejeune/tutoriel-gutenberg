@@ -620,10 +620,10 @@ const VisibleMeta = () => {
 
 /***/ }),
 
-/***/ "./src/js/text-format/index.js":
-/*!*************************************!*\
-  !*** ./src/js/text-format/index.js ***!
-  \*************************************/
+/***/ "./src/js/text-format/highlight/index.js":
+/*!***********************************************!*\
+  !*** ./src/js/text-format/highlight/index.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -639,7 +639,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const customTextFormat = ({
+const highLightTextFormat = ({
   isActive,
   value,
   onChange
@@ -649,20 +649,42 @@ const customTextFormat = ({
     title: "Test",
     onClick: () => {
       onChange((0,_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0__.toggleFormat)(value, {
-        type: 'tutoriel-gutenberg/test'
+        type: 'tutoriel-gutenberg/highlight'
       }));
     },
     isActive: isActive
   });
 };
-const addTextFormat = () => {
-  (0,_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0__.registerFormatType)('tutoriel-gutenberg/test', {
-    title: "Test",
-    tagName: 'span',
-    className: "test",
-    edit: customTextFormat
-  });
+const highlight = {
+  name: "tutoriel-gutenberg/highlight",
+  title: "High light",
+  tagName: 'span',
+  className: "highlight",
+  edit: highLightTextFormat
 };
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (highlight);
+
+/***/ }),
+
+/***/ "./src/js/text-format/index.js":
+/*!*************************************!*\
+  !*** ./src/js/text-format/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/rich-text */ "@wordpress/rich-text");
+/* harmony import */ var _wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highlight */ "./src/js/text-format/highlight/index.js");
+
+
+const textFormats = [_highlight__WEBPACK_IMPORTED_MODULE_1__["default"]];
+const addTextFormat = () => textFormats.map(format => (0,_wordpress_rich_text__WEBPACK_IMPORTED_MODULE_0__.registerFormatType)(format.name, {
+  ...format
+}));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addTextFormat);
 
 /***/ }),
