@@ -1,11 +1,11 @@
-.wp-block-tutoriel-gutenberg-first-block{
+.wp-block-tutoriel-gutenberg-first-block {
     padding: 15px;
     border: 1px solid var(--wp--preset--color--black);
     border-radius: 5px;
-    opacity: var(--transparency, 100%);
-    &__text{
+
+    &__text {
         display: block;
         width: max-content;
-        transform: var(--rotate, rotate(0deg));
+        transform: var(--rotate, rotate(0deg)); // Permet une rotation dynamique via une variable CSS
     }
 }

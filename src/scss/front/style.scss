@@ -1,8 +1,13 @@
-@use "first-block";
+@use "first-block"; // Importe le fichier SCSS pour le premier bloc personnalisé
 
-.wp-block-group{
-    &.alignfull{
+.wp-block-group {
+    &.alignfull {
         background-color: var(--wp--preset--color--black);
         color: var(--wp--preset--color--white);
     }
+}
+
+// Applique une opacité dynamique en fonction d'une variable CSS
+[style*="--transparency"] {
+    opacity: var(--transparency, 100%);
 }
